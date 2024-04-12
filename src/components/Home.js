@@ -92,7 +92,7 @@ const StudentHome = () => {
                     "The roots of education are bitter, but the fruit is sweet."
                 </div>
 
-                <div className='flex flex-col mb-2  sm:flex-row gap-x-4 gap-y-4 sm:items-center'>
+                <div className='flex flex-col mb-2 sm:flex-row gap-x-4 gap-y-4 sm:items-center'>
                     <button class="uppercase px-4 py-2 bg-slate-800 text-yellow-300 rounded-sm font-mavenPro flex gap-x-3 items-center justify-center">
                         Get started now
                         <FaArrowRightLong/>
@@ -144,7 +144,7 @@ const StudentHome = () => {
 
             {/* about us */}
             <div className='px-10 my-12 sm:px-24 Lmd:px-10 3xl:px-32'>
-                <div className='flex  gap-x-7 lg:gap-x-12 xl:gap-x-16 3xl:gap-x-36'>
+                <div className='flex gap-x-7 lg:gap-x-12 xl:gap-x-16 3xl:gap-x-36'>
                     {/* image */}
                     <div 
                     className=' rounded-md overflow-hidden shadow-xl
@@ -162,7 +162,7 @@ const StudentHome = () => {
                     '>
                         <img 
                             src={aboutUs} 
-                            className='w-full h-full transition-all  hover:scale-105'
+                            className='w-full h-full transition-all hover:scale-105'
                             alt="about us"
                         />
                     </div>
@@ -181,7 +181,7 @@ const StudentHome = () => {
                         </div>
 
                         {/* lower */}
-                        <div className='w-full mt-10 space-y-5  xl:space-y-9 3xl:space-y-7 xl:mt-16'>
+                        <div className='w-full mt-10 space-y-5 xl:space-y-9 3xl:space-y-7 xl:mt-16'>
                             {aboutUsCardContent.map((val, index) => (
                                 <AboutUsCard
                                     key={index+val.title}
@@ -240,7 +240,7 @@ const StudentHome = () => {
                     </div>
                 </div>
 
-                <div className='grid  md:grid-cols-2 Cxl:grid-cols-3 2xl:grid-cols-4 gap-14'>
+                <div className='grid md:grid-cols-2 Cxl:grid-cols-3 2xl:grid-cols-4 gap-14'>
                     {onlineCourses.map((course, index) => (
                         <div 
                         className='group bg-gray-100 shadow-lg shadow-slate-900 hover:bg-slate-800 duration-200 flex flex-col items-center justify-center rounded-md overflow-hidden py-4 px-[4.3rem] cursor-pointer border border-slate-800'
@@ -248,19 +248,19 @@ const StudentHome = () => {
                             <div className='w-[5rem] h-[5rem]'>
                                 <img 
                                     src={course.cover} 
-                                    className='w-full h-full duration-200  group-hover:hidden'
+                                    className='w-full h-full duration-200 group-hover:hidden'
                                     alt={course.course} 
                                 />
 
                                 <img 
                                     src={course.hoverCover} 
-                                    className='hidden w-full h-full duration-200  group-hover:block'
+                                    className='hidden w-full h-full duration-200 group-hover:block'
                                     alt={course.course} 
                                 />
                             </div>
 
                             <div className='flex flex-col items-center justify-center mt-7 gap-y-3'>
-                                <div className='text-xl font-bold duration-200  group-hover:text-cyan-300 font-robotoMono'>
+                                <div className='text-xl font-bold duration-200 group-hover:text-cyan-300 font-robotoMono'>
                                     {course.courseName}
                                 </div>
 
@@ -395,7 +395,7 @@ const NavBar = () => {
                     </FlyoutLink>
                 </div>
 
-                <div className='absolute top-0 w-5 h-full  -left-4 bg-slate-800 actionBtnBend'/>
+                <div className='absolute top-0 w-5 h-full -left-4 bg-slate-800 actionBtnBend'/>
             </div>
         </div>
     );

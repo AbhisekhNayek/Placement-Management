@@ -7,35 +7,11 @@ import { CiLogin } from "react-icons/ci";
 const StudentLogIn = () => {
     const [usn, setUsn] = useState('');
     const [password, setPassword] = useState('');
-    const [isFocused, setIsFocused] = useState({
-        usn: false,
-        password: false,
-    });
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
     const handleUsnChange = (event) => {
         setUsn(event.target.value);
-    };
-
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-    };
-
-    const handleUsnFocus = () => {
-        setIsFocused({ ...isFocused, usn: true });
-    };
-
-    const handlePasswordFocus = () => {
-        setIsFocused({ ...isFocused, password: true });
-    };
-
-    const handleUsnBlur = () => {
-        setIsFocused({ ...isFocused, usn: false });
-    };
-
-    const handlePasswordBlur = () => {
-        setIsFocused({ ...isFocused, password: false });
     };
 
     const handleRedirection = () => {
@@ -67,7 +43,7 @@ const StudentLogIn = () => {
     return (
         <BgColorAnimation
             child={
-                <div className=" h-screen flex justify-center items-center">
+                <div className="flex items-center justify-center h-screen ">
                     <form className="bg-[#ffffff2b] shadow-md rounded px-4 md:px-8 py-5 w-[22rem] xsm:w-[26rem] sm:w-[35rem] md:w-[40rem]" onSubmit={handleSubmit}>
                         <h1 className="text-[2rem] md:text-4xl text-center font-mooli tracking-wider text-violet-300 font-bold mb-6">
                             Student LogIn
@@ -98,7 +74,7 @@ const StudentLogIn = () => {
                                 required
                             />
 
-                            <div className="absolute right-2 top-3 text-xl cursor-pointer">
+                            <div className="absolute text-xl cursor-pointer right-2 top-3">
                                 {showPassword
                                     ? <MdOutlineVisibility className="text-blue-300" onClick={() => setShowPassword(!showPassword)} />
                                     : <MdOutlineVisibilityOff className="text-blue-300" onClick={() => setShowPassword(!showPassword)} />
@@ -108,13 +84,13 @@ const StudentLogIn = () => {
 
                         {/* LogIn */}
                         <div className="flex items-center justify-between mt-6">
-                            <button className="rounded-lg relative w-32 xsm:w-36 h-10 cursor-pointer flex items-center bg-slate-900 group hover:bg-slate-900 active:bg-slate-900 overflow-hidden" type="submit">
-                                <span className="text-gray-200 group-hover:text-slate-900 font-semibold ml-8 transform group-hover:translate-x-20 transition-all duration-300">
+                            <button className="relative flex items-center w-32 h-10 overflow-hidden rounded-lg cursor-pointer xsm:w-36 bg-slate-900 group hover:bg-slate-900 active:bg-slate-900" type="submit">
+                                <span className="ml-8 font-semibold text-gray-200 transition-all duration-300 transform group-hover:text-slate-900 group-hover:translate-x-20">
                                     Log In
                                 </span>
 
                                 <span className="absolute right-2 group-hover:-right-2 h-full w-8 rounded-lg bg-slate-900 flex items-center justify-center transform group-hover:translate-x-0 group-hover:w-[110%] transition-all duration-300">
-                                    <CiLogin className="text-2xl group-hover:text-3xl group-hover:font-bold text-gray-200 group-hover:text-green-300" />
+                                    <CiLogin className="text-2xl text-gray-200 group-hover:text-3xl group-hover:font-bold group-hover:text-green-300" />
                                 </span>
                             </button>
 
@@ -125,7 +101,7 @@ const StudentLogIn = () => {
 
                         {/* Registration */}
                         <div className="flex items-center justify-between mt-6">
-                            <span className="font-mooli font-bold text-md text-blue-400">
+                            <span className="font-bold text-blue-400 font-mooli text-md">
                                 New student?😐
                             </span>
 
