@@ -56,6 +56,7 @@ import StudentResume from './components/PdfViewer';
 import FeedbackTable from './components/Feedback';
 import AdminCompanyView from './components/AdminCompanyView';
 import AboutUs from './components/about/AboutUs';
+import Courses from './components/course/Courses';
 
 function App() {
   return (
@@ -118,6 +119,7 @@ function App() {
           <Route path="/AdminJobPosting" element={<AdminJobPosting/>}/>   
           <Route path="/AdminPlacedStudent" element={<AdminPlacedStudent/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
+          <Route path="/courses" element={<Courses />} /> 
         </Routes>
       </Router>
     </div>

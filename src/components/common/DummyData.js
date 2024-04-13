@@ -382,4 +382,3 @@ export const coursesCard = [
         pricePer: "FREE",
     },
 ];
-
