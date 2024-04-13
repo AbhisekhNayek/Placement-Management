@@ -17,7 +17,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import banner from '../images/banner/homeback.jpg';
 import aboutUs from '../images/banner/aboutUs.jpg';
 import statBg from '../images/stats/statBg.jpg';
-import { aboutUsCardContent, buttonsData, onlineCourses, statCard } from './common/DummyData';
+import { aboutUsCardContent, buttonsData, coursesCard, onlineCourses, statCard } from './common/DummyData';
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { TiStarFullOutline  } from "react-icons/ti";
 
 const ButtonWithCard = ({ imgSrc, alt, text, bgColor, textColor, titleColor }) => {
     return (
@@ -67,9 +69,22 @@ const AboutUsCard = ({ link, title, details }) => {
 const StudentHome = () => {
     const [isSearchBarHanging, setIsSearchBarHanging] = useState(false);
     const [typedText, setTypedText] = useState('');
+    const [courseDisplay, setCourseDisplay] = useState(3);
 
     const handleInputText = (e) => {
         setTypedText(e.target.value);
+    };
+
+    const handleNext = () => {
+        if (courseDisplay < coursesCard.length) {
+            setCourseDisplay(prevVal => prevVal + 1);
+        }
+    };
+
+    const handlePrevious = () => {
+        if (courseDisplay > coursesCard.length/3) {
+            setCourseDisplay(prevVal => prevVal - 1);
+        }
     };
     
     return (
@@ -228,7 +243,99 @@ const StudentHome = () => {
                 ))}
             </div>
 
-            {/* courses */}
+            {/* popular online courses */}
+            <>
+                <div className='mt-16 mb-8 font-bold text-center capitalize font-onest relative mx-6 flex flex-col items-center justify-center gap-y-2'>
+                    <div className='text-2xl md:text-3xl'>
+                        popular online courses
+                    </div>
+
+                    <div className='text-2xl md:text-3xl flex items-center justify-between w-full lsm:absolute lsm:left-0 lsm:top-0 h-full font-bold'>
+                        <div className='w-12 lsm:w-14 h-8 bg-slate-900 text-yellow-300 rounded-full flex items-center justify-center cursor-pointer'
+                        onClick={handlePrevious}>
+                            <GoArrowLeft className=''/>
+                        </div>
+                        
+                        <div className='w-12 lsm:w-14 h-8 bg-slate-900 text-yellow-300 rounded-full flex items-center justify-center cursor-pointer'
+                        onClick={handleNext}>
+                            <GoArrowRight className=''/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div className='flex flex-wrap items-center justify-center gap-16 px-10'>  
+                    {coursesCard.slice(0, courseDisplay).map((course, index) => (
+                        <div 
+                        className='px-4 py-3 overflow-hidden duration-200 rounded-lg hover:rounded-md shadow-xl shadow-slate-400 hover:shadow-violet-400 group bg-slate-200 hover:bg-gradient-to-br hover:from-indigo-200 hover:via-violet-100 hover:to-blue-100 w-[28rem] h-fit transition-all'
+                        key={index}>
+                            {/* upper */}
+                            <div className='flex items-center justify-center w-full'>
+                                <div className='flex items-center justify-center gap-x-5'>
+                                    <div className='flex items-center justify-center min-w-[5.5rem] max-w-[5.5rem] min-h-[5.5rem] max-h-[5.5rem] p-3 overflow-hidden rounded-full bg-slate-800 group-hover:bg-cyan-700 duration-150 group-hover:scale-105 transition-all'>
+                                        <img 
+                                            src={course.cover}
+                                            className='w-full h-full group-hover:scale-110 transition-all'
+                                            alt={course.coursesName}
+                                        />
+                                    </div>
+                                    
+                                    <div className='text-[1.2rem] font-bold font-montserrat group-hover:text-indigo-800  duration-200 group-hover:translate-x-4 group-hover:-translate-y-1'>
+                                        {course.coursesName}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* mid */}
+                            <div className=' px-3 space-y-5'>
+                                <div className=' mt-3 flex items-center justify-between'>
+                                    {/* person details */}
+                                    <div className='font-mavenPro space-y-1 group-hover:-translate-x-2 transition-all'>
+                                        <div className=' font-bold text-[1.2rem] text-blue-900'>
+                                            {course.courTeacher[0].name}
+                                        </div>
+
+                                        <div className=' font-bold text-[.9rem]'>
+                                            {course.courTeacher[0].totalTime}
+                                        </div>
+                                    </div>
+
+                                    {/* avatar */}
+                                    <div className='w-[5.3rem] h-[3.8rem] rounded-md overflow-hidden group-hover:translate-x-2 transition-all'>
+                                        <img 
+                                            src={course.courTeacher[0].dcover}
+                                            className=' w-full h-full'
+                                            alt={course.coursesName}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className=' flex items-center justify-between gap-x-16 '>
+                                    {/* stars */}
+                                    <div className=' flex items-center gap-x-1 text-xl group-hover:-translate-x-2 transition-all'>
+                                        {[...Array(5)].map((_, i) => (
+                                            <TiStarFullOutline key={i} className=' group-hover:scale-110 transition-all'/>
+                                        ))}
+                                    </div>
+
+                                    {/* value */}
+                                    <div className='uppercase flex items-center justify-center font-onest text-[1rem] w-full bg-slate-300 text-slate-900 font-bold tracking-wide group-hover:translate-x-2 py-1 rounded-md transition-all'>
+                                        {course.priceAll} / {course.pricePer}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* lower */}
+                            <a href={course.joinNowLink} className=' no-underline'>
+                                <button className='uppercase mt-4 flex items-center justify-center font-bold font-onest text-xl w-full bg-slate-700 text-white tracking-wide group-hover:bg-slate-900 group-hover:translate-y-1 py-2 rounded-md transition-all'>
+                                    join now
+                                </button>
+                            </a>
+                        </div>
+                    ))}
+                </div>
+            </>
+
+            {/* best online courses */}
             <div className='flex flex-col items-center justify-center mt-10 gap-y-10'>
                 <div className='flex flex-col items-center space-y-3 '>
                     <div className='text-[1.6rem] xl:text-[2rem] font-bold font-montserrat bg-gradient-to-br from-indigo-700 via-violet-700 to-blue-800 bg-clip-text text-transparent'>

@@ -43,6 +43,18 @@ import learning from '../../images/banner/storytelling.png';
 import certificate from '../../images/banner/diploma.png';
 import career from '../../images/banner/athlete.png';
 
+import c1 from '../../images/courses/c1.png';
+import c2 from '../../images/courses/c2.png';
+import c3 from '../../images/courses/c3.png';
+import c4 from '../../images/courses/c4.png';
+import c5 from '../../images/courses/c5.png';
+import c6 from '../../images/courses/c6.png';
+import c7 from '../../images/courses/c7.png';
+import c8 from '../../images/courses/c8.png';
+import c9 from '../../images/courses/c9.png';
+
+import avatar from '../../images/courses/profile.gif';
+
 export const onlineCourses = [
     {
         cover: o1,
@@ -241,3 +253,133 @@ export const aboutUsCardContent = [
         details: `Education as Your Career Catalyst. StuMate guides students in bridging the gap between education and professional success.`,
     }
 ];
+
+export const coursesCard = [
+    {
+        cover: c1,
+        coursesName: "Introducing to Cloud IOT Edge ML",
+        joinNowLink :"https://youtu.be/7s-ZHB-l0dk?si=HC11SotVfFWr_VeV",
+        courTeacher: [
+            {
+                dcover: avatar,
+                name: "by Dr. Rajiv Mishra",
+                totalTime: "24 lectures (150 hrs)",
+            },
+        ],
+        priceAll: "FREE",
+        pricePer: "FREE",
+    },
+    {
+        cover: c2,
+        coursesName: "Introduction to Artificial Intelligence",
+        joinNowLink: "https://youtu.be/uB3i-qV6VdM?si=L2LuCJ9NZQ1yOPy3",
+        courTeacher: [
+            {
+                dcover: avatar,
+                name: "by Gate Smashers",
+                totalTime: "50 lectures (190 hrs)",
+            },
+        ],
+        priceAll: "FREE",
+        pricePer: "FREE",
+    },
+    {
+        cover: c3,
+        coursesName: "Graphics Designing With Photoshop",
+        joinNowLink: "https://youtu.be/ZByhs9mDtDg?si=wQIkXk8hVaLXk15I",
+        courTeacher: [
+            {
+                dcover: avatar,
+                name: "by GFXMentor",
+                totalTime: "50 lectures (190 hrs)",
+            },
+        ],
+        priceAll: "FREE",
+        pricePer: "FREE",
+    },
+    {
+        cover: c4,
+        coursesName: "Web Development & Designing with WordPress",
+        joinNowLink: "https://youtu.be/-6q3Rt1MTtk?si=gBg98q1nX6Ws7Qpi",
+        courTeacher: [
+            {
+                dcover: avatar,
+                name: "by Abhisekh Nayek",
+                totalTime: "50 lectures (190 hrs)",
+            },
+        ],
+        priceAll: "FREE",
+        pricePer: "FREE",
+    },
+    {
+        cover: c5,
+        coursesName: "Frontend Framework with ReactJS",
+        joinNowLink: "https://youtu.be/tiLWCNFzThE?si=c0MSEujtDmuwERlB",
+        courTeacher: [
+            {
+                dcover: avatar,
+                name: "by Thapa Technical",
+                totalTime: "50 lectures (190 hrs)",
+            },
+        ],
+        priceAll: "FREE",
+        pricePer: "FREE",
+    },
+    {
+        cover: c6,
+        coursesName: "Learn Network Security & Socket Programming",
+        joinNowLink: "https://youtu.be/JFF2vJaN0Cw?si=jG4IErAqXrL2UXsX",
+        courTeacher: [
+            {
+                dcover: avatar,
+                name: "by Varun Singla",
+                totalTime: "50 lectures (190 hrs)",
+            },
+        ],
+        priceAll: "FREE",
+        pricePer: "FREE",
+    },
+    {
+        cover: c7,
+        coursesName: "Frontend Development with HTML, CSS and JS",
+        joinNowLink: "https://youtu.be/6mbwJ2xhgzM?si=U5D0XnwcEzL1tMQU",
+        courTeacher: [
+            {
+                dcover: avatar,
+                name: "by Code With Harry",
+                totalTime: "103 lectures (200 hrs)",
+            },
+        ],
+        priceAll: "FREE",
+        pricePer: "FREE",
+    },
+    {
+        cover: c8,
+        coursesName: "Introduction to SpringBoot (Full Stack)",
+        joinNowLink: "https://youtu.be/5PdEmeopJVQ?si=2TmJ5wnRmxp5zfSt",
+        courTeacher: [
+            {
+                dcover: avatar,
+                name: "by Free Code Camp Org",
+                totalTime: "1 lectures (240 hrs)",
+            },
+        ],
+        priceAll: "FREE",
+        pricePer: "FREE",
+    },
+    {
+        cover: c9,
+        coursesName: "Full Stack Development With MERN",
+        joinNowLink: "https://www.youtube.com/watch?v=fSmp7Cv-c_0&list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc&index=1&t=1s",
+        courTeacher: [
+            {
+                dcover: avatar,
+                name: "by Thapa Technical",
+                totalTime: "43 lectures (190 hrs)",
+            },
+        ],
+        priceAll: "FREE",
+        pricePer: "FREE",
+    },
+];
+

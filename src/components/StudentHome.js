@@ -18,7 +18,6 @@ import profile from '../images/profile.png';
 import feedback from '../images/feedback.png';
 import { CiLogout } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
-import { TypewriterEffectSmooth } from '../animations/TypeWriter'
 
 const buttonsData = [
     {
@@ -145,17 +144,6 @@ const StudentHome = () => {
     return (
         <div>
             <NavBar/>
-
-            {/* type writer */}
-            {/* <div className=' flex flex-wrap font-bold font-k2d absolute top-[4rem] left-1/2 -translate-x-1/2 bg-gradient-to-br from-red-300 via-indigo-300 to-violet-400 tracking-wide z-30 bg-clip-text text-transparent'>
-                <TypewriterEffectSmooth
-                    words={[
-                        { text: "Welcome to Stumate" },
-                        // { text: "to" },
-                        // { text: "StuMate" },
-                    ]}
-                />
-            </div> */}
 
             <div className=' max-h-[50rem] object-contain overflow-hidden'>
                 <img 
