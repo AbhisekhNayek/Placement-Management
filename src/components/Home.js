@@ -245,21 +245,21 @@ const StudentHome = () => {
 
             {/* popular online courses */}
             <>
-                <div className='mt-16 mb-8 font-bold text-center capitalize font-onest relative mx-6 flex flex-col items-center justify-center gap-y-2'>
+                <div className='relative flex flex-col items-center justify-center mx-6 mt-16 mb-8 font-bold text-center capitalize font-onest gap-y-2'>
                     <div className='text-2xl md:text-3xl'>
                         popular online courses
                     </div>
 
-                    <div className='text-2xl md:text-3xl flex items-center justify-between w-full lsm:absolute lsm:left-0 lsm:top-0 h-full font-bold'>
-                        <div className='w-12 lsm:w-14 h-8 bg-slate-900 text-yellow-300 rounded-full flex items-center justify-center cursor-pointer'
+                    <div className='flex items-center justify-between w-full h-full text-2xl font-bold md:text-3xl lsm:absolute lsm:left-0 lsm:top-0'>
+                        <button className='flex items-center justify-center w-12 h-8 text-yellow-300 transition-all rounded-full cursor-pointer lsm:w-14 bg-slate-900 active:scale-110'
                         onClick={handlePrevious}>
                             <GoArrowLeft className=''/>
-                        </div>
+                        </button>
                         
-                        <div className='w-12 lsm:w-14 h-8 bg-slate-900 text-yellow-300 rounded-full flex items-center justify-center cursor-pointer'
+                        <button className='flex items-center justify-center w-12 h-8 text-yellow-300 transition-all rounded-full lsm:w-14 bg-slate-900 active:scale-110'
                         onClick={handleNext}>
                             <GoArrowRight className=''/>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 
@@ -274,7 +274,7 @@ const StudentHome = () => {
                                     <div className='flex items-center justify-center min-w-[5.5rem] max-w-[5.5rem] min-h-[5.5rem] max-h-[5.5rem] p-3 overflow-hidden rounded-full bg-slate-800 group-hover:bg-cyan-700 duration-150 group-hover:scale-105 transition-all'>
                                         <img 
                                             src={course.cover}
-                                            className='w-full h-full group-hover:scale-110 transition-all'
+                                            className='w-full h-full transition-all group-hover:scale-110'
                                             alt={course.coursesName}
                                         />
                                     </div>
@@ -286,10 +286,10 @@ const StudentHome = () => {
                             </div>
                             
                             {/* mid */}
-                            <div className=' px-3 space-y-5'>
-                                <div className=' mt-3 flex items-center justify-between'>
+                            <div className='px-3 space-y-5 '>
+                                <div className='flex items-center justify-between mt-3 '>
                                     {/* person details */}
-                                    <div className='font-mavenPro space-y-1 group-hover:-translate-x-2 transition-all'>
+                                    <div className='space-y-1 transition-all font-mavenPro group-hover:-translate-x-2'>
                                         <div className=' font-bold text-[1.2rem] text-blue-900'>
                                             {course.courTeacher[0].name}
                                         </div>
@@ -303,17 +303,17 @@ const StudentHome = () => {
                                     <div className='w-[5.3rem] h-[3.8rem] rounded-md overflow-hidden group-hover:translate-x-2 transition-all'>
                                         <img 
                                             src={course.courTeacher[0].dcover}
-                                            className=' w-full h-full'
+                                            className='w-full h-full '
                                             alt={course.coursesName}
                                         />
                                     </div>
                                 </div>
 
-                                <div className=' flex items-center justify-between gap-x-16 '>
+                                <div className='flex items-center justify-between gap-x-16'>
                                     {/* stars */}
-                                    <div className=' flex items-center gap-x-1 text-xl group-hover:-translate-x-2 transition-all'>
+                                    <div className='flex items-center text-xl transition-all gap-x-1 group-hover:-translate-x-2'>
                                         {[...Array(5)].map((_, i) => (
-                                            <TiStarFullOutline key={i} className=' group-hover:scale-110 transition-all'/>
+                                            <TiStarFullOutline key={i} className='transition-all group-hover:scale-110'/>
                                         ))}
                                     </div>
 
@@ -325,8 +325,8 @@ const StudentHome = () => {
                             </div>
 
                             {/* lower */}
-                            <a href={course.joinNowLink} className=' no-underline'>
-                                <button className='uppercase mt-4 flex items-center justify-center font-bold font-onest text-xl w-full bg-slate-700 text-white tracking-wide group-hover:bg-slate-900 group-hover:translate-y-1 py-2 rounded-md transition-all'>
+                            <a href={course.joinNowLink} className='no-underline '>
+                                <button className='flex items-center justify-center w-full py-2 mt-4 text-xl font-bold tracking-wide text-white uppercase transition-all rounded-md font-onest bg-slate-700 group-hover:bg-slate-900 group-hover:translate-y-1'>
                                     join now
                                 </button>
                             </a>
