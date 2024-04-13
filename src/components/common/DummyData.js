@@ -55,6 +55,14 @@ import c9 from '../../images/courses/c9.png';
 
 import avatar from '../../images/courses/profile.gif';
 
+import { TiHomeOutline } from "react-icons/ti";
+import { AiOutlineSchedule } from "react-icons/ai";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { RiTeamLine } from "react-icons/ri";
+import { IoBriefcaseOutline } from "react-icons/io5";
+import { TbBrandBlogger } from "react-icons/tb";
+import { AiOutlineContacts } from "react-icons/ai";
+
 export const onlineCourses = [
     {
         cover: o1,
@@ -381,4 +389,59 @@ export const coursesCard = [
         priceAll: "FREE",
         pricePer: "FREE",
     },
+];
+
+export const footerLists = [
+    {
+        title: 'Services',
+        items: [
+            { name: '1on1 Coaching', href: '#' },
+            { name: 'Company Review', href: '#' },
+            { name: 'Accounts Review', href: '#' },
+            { name: 'HR Consulting', href: '#' },
+            { name: 'SEO Optimisation', href: '#' }
+        ]
+    },
+    {
+        title: 'Company',
+        items: [
+            { name: 'About', href: '#' },
+            { name: 'Meet the Team', href: '#' },
+            { name: 'Accounts Review', href: '#' }
+        ]
+    },
+    {
+        title: 'Helpful Links',
+        items: [
+            { name: 'Contact', href: '#' },
+            { name: 'FAQs', href: '#' },
+            { name: 'Live Chat', href: '#' }
+        ]
+    },
+    {
+        title: 'Legal',
+        items: [
+            { name: 'Accessibility', href: '#' },
+            { name: 'Returns Policy', href: '#' },
+            { name: 'Refund Policy', href: '#' },
+            { name: 'Hiring Statistics', href: '#' }
+        ]
+    },
+    {
+        title: 'Downloads',
+        items: [
+            { name: 'Marketing Calendar', href: '#' },
+            { name: 'SEO Infographics', href: '#' }
+        ]
+    }
+];
+
+export const tabs = [
+    {text: 'Home', icon: <TiHomeOutline/>, path: '/'},
+    {text: 'Courses', icon: <AiOutlineSchedule/>, path: '/courses'},
+    {text: 'About Us', icon: <MdOutlineAccountCircle/>, path: '/aboutus'},
+    {text: 'Our Team', icon: <RiTeamLine/>, path: '/team'},
+    {text: 'Placement', icon: <IoBriefcaseOutline/>, path: '/'},
+    {text: 'Blogs', icon: <TbBrandBlogger/>, path: '/'},
+    {text: 'Contact Us', icon: <AiOutlineContacts/>, path: '/'},
 ];

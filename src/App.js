@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import React from "react";
-import Home from './components/Home';
+import Home from './components/home/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import StudentLogIn from './components/StudentLogIn';
 import StudentRegister from './components/StudentRegister';
@@ -55,8 +55,9 @@ import CompanyInterview from './components/CompanyInterview'
 import StudentResume from './components/PdfViewer';
 import FeedbackTable from './components/Feedback';
 import AdminCompanyView from './components/AdminCompanyView';
-import AboutUs from './components/about/AboutUs';
-import Courses from './components/course/Courses';
+import AboutUs from './components/home/about/AboutUs';
+import Courses from './components/home/course/Courses';
+import Team from './components/home/team/Team';
 
 function App() {
   return (
@@ -119,7 +120,8 @@ function App() {
           <Route path="/AdminJobPosting" element={<AdminJobPosting/>}/>   
           <Route path="/AdminPlacedStudent" element={<AdminPlacedStudent/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
-          <Route path="/courses" element={<Courses />} /> 
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
       </Router>
     </div>
