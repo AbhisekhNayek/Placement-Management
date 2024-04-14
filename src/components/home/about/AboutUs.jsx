@@ -1,17 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { TiHomeOutline, TiStarFullOutline } from "react-icons/ti";
-import { AiOutlineSchedule } from "react-icons/ai";
-import { MdOutlineAccountCircle, MdOutlineAdminPanelSettings } from "react-icons/md";
 import { PiStudentDuotone } from "react-icons/pi";
 import { FaBuildingUser } from "react-icons/fa6";
-import { IoBriefcaseOutline } from "react-icons/io5";
-import { TbBrandBlogger } from "react-icons/tb";
-import { AiOutlineContacts } from "react-icons/ai";
-import { RiTeamLine } from 'react-icons/ri';
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import banner from '../../../images/courses/coursesBanner.jpg';
-import { aboutUsCardContent, coursesCard, footerLists, onlineCourses, statCard, tabs } from '../../common/DummyData';
+import { aboutUsCardContent, footerLists, statCard, tabs } from '../../common/DummyData';
 import { FaGithub, FaInstagram, FaLinkedin, FaMeta, FaXTwitter } from 'react-icons/fa6';
 import aboutUs from '../../../images/banner/aboutUs.jpg';
 import statBg from '../../../images/stats/statBg.jpg';
@@ -43,6 +37,7 @@ const AboutUsCard = ({ link, title, details }) => {
 const AboutUs = () => {
     return (
         <div className='relative h-screen scroll-smooth'>
+            {/* banner */}
             <div
             className={`h-full flex flex-col items-start justify-center pl-4 pr-4 sm:pl-12 md:pl-32 bg-fixed bg-cover bg-left`}
             style={{
@@ -154,6 +149,7 @@ const AboutUs = () => {
                 ))}
             </div>
             
+            {/* footer */}
             <div className='mt-10'>
                 <Footer/>
             </div>

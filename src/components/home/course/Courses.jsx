@@ -12,6 +12,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaMeta, FaXTwitter } from 'react-ico
 const Courses = () => {
     return (
         <div className='relative h-screen scroll-smooth'>
+            {/* banner */}
             <div
             className={`h-full flex flex-col items-start justify-center pl-4 pr-4 sm:pl-12 md:pl-32 bg-fixed bg-cover bg-top`}
             style={{
@@ -39,10 +40,11 @@ const Courses = () => {
 
             {/* popular online courses */}
             <>
-                <div className='relative flex flex-col items-center justify-center mx-6 mt-16 mb-8 font-bold text-center capitalize font-onest gap-y-2 text-2xl md:text-3xl'>
+                <div className='relative flex flex-col items-center justify-center mx-6 mt-16 mb-8 text-2xl font-bold text-center capitalize font-onest gap-y-2 md:text-3xl'>
                     popular online courses
                 </div>
                 
+                {/* cards */}
                 <div className='flex flex-wrap items-center justify-center gap-16 px-10'>  
                     {coursesCard.map((course, index) => (
                         <div 
@@ -51,7 +53,12 @@ const Courses = () => {
                             {/* upper */}
                             <div className='flex items-center justify-center w-full'>
                                 <div className='flex items-center justify-center gap-x-5'>
-                                    <div className='flex items-center justify-center min-w-[5.5rem] max-w-[5.5rem] min-h-[5.5rem] max-h-[5.5rem] p-3 overflow-hidden rounded-full bg-slate-800 group-hover:bg-cyan-700 duration-150 group-hover:scale-105 transition-all'>
+                                    <div className='flex items-center justify-center 
+                                    min-w-[5rem] max-w-[5rem] 
+                                    min-h-[5rem] max-h-[5rem]
+                                    sm:min-w-[5.5rem] sm:max-w-[5.5rem] 
+                                    sm:min-h-[5.5rem] sm:max-h-[5.5rem] 
+                                    p-3 overflow-hidden rounded-full bg-slate-800 group-hover:bg-cyan-700 duration-150 group-hover:scale-105 transition-all'>
                                         <img 
                                             src={course.cover}
                                             className='w-full h-full transition-all group-hover:scale-110'
@@ -59,18 +66,18 @@ const Courses = () => {
                                         />
                                     </div>
                                     
-                                    <div className='text-[1.2rem] font-bold font-montserrat group-hover:text-indigo-800  duration-200 group-hover:translate-x-4 group-hover:-translate-y-1'>
+                                    <div className='text-[1rem] lsm:text-[1.2rem] font-bold font-montserrat group-hover:text-indigo-800  duration-200 group-hover:translate-x-4 group-hover:-translate-y-1'>
                                         {course.coursesName}
                                     </div>
                                 </div>
                             </div>
                             
                             {/* mid */}
-                            <div className='px-3 space-y-5 '>
+                            <div className='space-y-5 lsm:px-3 '>
                                 <div className='flex items-center justify-between mt-3 '>
                                     {/* person details */}
                                     <div className='space-y-1 transition-all font-mavenPro group-hover:-translate-x-2'>
-                                        <div className=' font-bold text-[1.2rem] text-blue-900'>
+                                        <div className=' font-bold text-[1.1rem] sm:text-[1.2rem] text-blue-900'>
                                             {course.courTeacher[0].name}
                                         </div>
 
@@ -89,16 +96,16 @@ const Courses = () => {
                                     </div>
                                 </div>
 
-                                <div className='flex items-center justify-between gap-x-16'>
+                                <div className='flex items-center justify-between gap-x-8 lsm:gap-x-16'>
                                     {/* stars */}
-                                    <div className='flex items-center text-xl transition-all gap-x-1 group-hover:-translate-x-2'>
+                                    <div className='flex items-center text-xl transition-all lsm:gap-x-1 group-hover:-translate-x-2'>
                                         {[...Array(5)].map((_, i) => (
                                             <TiStarFullOutline key={i} className='transition-all group-hover:scale-110'/>
                                         ))}
                                     </div>
 
                                     {/* value */}
-                                    <div className='uppercase flex items-center justify-center font-onest text-[1rem] w-full bg-slate-300 text-slate-900 font-bold tracking-wide group-hover:translate-x-2 py-1 rounded-md transition-all'>
+                                    <div className='uppercase flex items-center justify-center font-onest text-[.9rem] lsm:text-[1rem] w-full bg-slate-300 text-slate-900 font-bold tracking-wide group-hover:translate-x-2 py-1 rounded-md transition-all max-w-[10rem]'>
                                         {course.priceAll} / {course.pricePer}
                                     </div>
                                 </div>
@@ -106,7 +113,7 @@ const Courses = () => {
 
                             {/* lower */}
                             <a href={course.joinNowLink} className='no-underline '>
-                                <button className='flex items-center justify-center w-full py-2 mt-4 text-xl font-bold tracking-wide text-white uppercase transition-all rounded-md font-onest bg-slate-700 group-hover:bg-slate-900 group-hover:translate-y-1'>
+                                <button className='flex items-center justify-center w-full py-2 mt-4 text-lg font-bold tracking-wide text-white uppercase transition-all rounded-md sm:text-xl font-onest bg-slate-700 group-hover:bg-slate-900 group-hover:translate-y-1'>
                                     join now
                                 </button>
                             </a>
@@ -118,11 +125,11 @@ const Courses = () => {
             {/* best online courses */}
             <div className='flex flex-col items-center justify-center mt-16 gap-y-10'>
                 <div className='flex flex-col items-center space-y-3 '>
-                    <div className='text-[1.6rem] xl:text-[2rem] font-bold font-montserrat bg-gradient-to-br from-indigo-700 via-violet-700 to-blue-800 bg-clip-text text-transparent'>
+                    <div className='text-[1.4rem] sm:text-[2rem] font-bold font-montserrat bg-gradient-to-br from-indigo-700 via-violet-700 to-blue-800 bg-clip-text text-transparent'>
                         Courses
                     </div>
 
-                    <div className='text-3xl font-bold text-center text-blue-900 xl:text-5xl font-montserrat'>
+                    <div className='text-[1.6rem] sm:text-3xl font-bold text-center text-blue-900 xl:text-5xl font-montserrat'>
                         Browse Our Best Online Courses
                     </div>
                 </div>
@@ -135,13 +142,13 @@ const Courses = () => {
                             <div className='w-[5rem] h-[5rem] group-hover:scale-105'>
                                 <img 
                                     src={course.cover} 
-                                    className='w-full h-full duration-200 group-hover:hidden group-hover:scale-110 transition-all'
+                                    className='w-full h-full transition-all duration-200 group-hover:hidden group-hover:scale-110'
                                     alt={course.course} 
                                 />
 
                                 <img 
                                     src={course.hoverCover} 
-                                    className='hidden w-full h-full duration-200 group-hover:block group-hover:scale-110 transition-all'
+                                    className='hidden w-full h-full transition-all duration-200 group-hover:block group-hover:scale-110'
                                     alt={course.course} 
                                 />
                             </div>
@@ -160,6 +167,7 @@ const Courses = () => {
                 </div>
             </div>
             
+            {/* footer */}
             <div className='mt-10'>
                 <Footer/>
             </div>

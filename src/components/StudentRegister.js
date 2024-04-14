@@ -66,7 +66,7 @@ const StudentRegister = () => {
             });
 
             const data = await response.json();
-            if(data.message=='ok'){
+            if(data.message === 'ok'){
                 navigate('/StudentLogIn')
             }
             console.log(data); // Handle the response from the backend
@@ -128,12 +128,12 @@ const StudentRegister = () => {
     return (
         <BgColorAnimation
             child={  
-                <Form onSubmit={handleSubmit} className=' h-screen overflow-auto flex items-center justify-center px-2'>
+                <Form onSubmit={handleSubmit} className='flex items-center justify-center h-screen px-2 overflow-auto '>
                     <div className={`container bg-[#b7b7b748] shadow-md rounded h-[96vh] overflow-y-auto py-3`}>
                         <p className=" text-[1.7rem] md:text-4xl font-mooli tracking-wider text-violet-300 font-bold mb-6 text-center">Register as Student</p>
 
                         {/* personal details */}
-                        <div className=' space-y-3 mb-4'>
+                        <div className='mb-4 space-y-3 '>
                             <p className=' font-k2d text-yellow-200 text-[1.5rem]'>
                                 Personal Details
                             </p>
@@ -201,7 +201,7 @@ const StudentRegister = () => {
                                     />
                                 </Form.Group>
 
-                                <Form.Group as={Col} xs={12} lg={4} controlId="formGridPassword" className=' relative'>
+                                <Form.Group as={Col} xs={12} lg={4} controlId="formGridPassword" className='relative '>
                                     <input
                                         type={showPswd ? 'text' : 'password'}
                                         name="password"
@@ -212,7 +212,7 @@ const StudentRegister = () => {
                                         onChange={handleChange}
                                     />
 
-                                    <div className="absolute top-3 right-4 cursor-pointer">
+                                    <div className="absolute cursor-pointer top-3 right-4">
                                         {showPswd
                                             ? <MdOutlineVisibility className="text-xl text-blue-300" onClick={handlePasswordVisibility} />
                                             : <MdOutlineVisibilityOff className="text-xl text-blue-300" onClick={handlePasswordVisibility} />
@@ -325,7 +325,7 @@ const StudentRegister = () => {
 
 
                         {/* educational details 1 */}
-                        <div className='mb-4 w-full'>
+                        <div className='w-full mb-4'>
                             <p className='font-k2d text-yellow-200 text-[1.5rem]'>
                                 Educational Details 1
                             </p>
@@ -400,7 +400,7 @@ const StudentRegister = () => {
 
 
                         {/* educational details 2 */}
-                        <div className='mb-4 w-full'>
+                        <div className='w-full mb-4'>
                             <p className='font-k2d text-yellow-200 text-[1.5rem]'>
                                 Educational Details 2
                             </p>
@@ -475,7 +475,7 @@ const StudentRegister = () => {
 
 
                         {/* college qualification */}
-                        <div className=' space-y-3'>
+                        <div className='space-y-3 '>
                             <p className='font-k2d text-yellow-200 text-[1.5rem]'>
                                 College Qualification
                             </p>
@@ -600,9 +600,9 @@ const StudentRegister = () => {
                             </div>
 
                             {/* Checkbox text */}
-                            <label className="ml-2 text-sm font-medium text-cyan-200 font-robotoMono w-full flex items-center gap-x-2">
+                            <label className="flex items-center w-full ml-2 text-sm font-medium text-cyan-200 font-robotoMono gap-x-2">
                                 I agree with the{" "}
-                                <a href="#" className=" text-cyan-200 hover:underline hover:text-blue-800 hover:font-bold hover:bg-blue-300 hover:rounded-md hover:px-2 transition-all flex flex-wrap">
+                                <a href="#" className="flex flex-wrap transition-all text-cyan-200 hover:underline hover:text-blue-800 hover:font-bold hover:bg-blue-300 hover:rounded-md hover:px-2">
                                     terms and conditions
                                 </a>
                             </label>
@@ -610,7 +610,7 @@ const StudentRegister = () => {
 
 
                         {/* submit button */}
-                        <div className="flex flex-col sm:flex-row items-center justify-between gap-y-4 mt-8">
+                        <div className="flex flex-col items-center justify-between mt-8 sm:flex-row gap-y-4">
                             <button 
                             className=" text-md font-bold bg-slate-800 text-blue-400 hover:text-indigo-400 font-robotoMono ring-2 ring-violet-400 w-full sm:w-[7rem] h-9 sm:h-8 rounded-full active:ring-green-300 active:text-green-300 transition-all" 
                             type="submit">
@@ -626,7 +626,7 @@ const StudentRegister = () => {
 
 
                         {/* Login */}
-                        <div className='mt-2 flex gap-x-2 items-center '>
+                        <div className='flex items-center mt-2 gap-x-2 '>
                             <span className='font-mooli text-cyan-200'>Already have an account?</span>
                             <button 
                             className=" text-cyan-200 bg-slate-800 rounded-md font-robotoMono px-2.5 py-.5 underline hover:text-blue-800 hover:font-bold hover:bg-blue-300 hover:rounded-md hover:px-2 transition-all flex flex-wrap" 
