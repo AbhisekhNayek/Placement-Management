@@ -470,4 +470,79 @@ export const teamMember = [
             mail: 'soumyadas429@gmail.com',
         },
     },
-]
+];
+
+export const barChartData = {
+    labels: ['Google', 'Microsoft', 'Apple', 'Amazon', 'Facebook', 'Tesla', 'Netflix', 'Uber', 'TCS'],
+    datasets: [{
+        label: 'Hiring Numbers',
+        data: [150, 112, 90, 130, 120, 80, 100, 110, 190],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.4)',
+            'rgba(255, 159, 64, 0.4)',
+            'rgba(255, 205, 86, 0.4)',
+            'rgba(75, 192, 192, 0.4)',
+            'rgba(54, 162, 235, 0.4)',
+            'rgba(153, 102, 255, 0.4)',
+            'rgba(255, 159, 64, 0.4)',
+            'rgba(255, 99, 132, 0.4)',
+            'rgba(75, 192, 192, 0.4)',
+        ],
+        borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 99, 132)',
+            'rgb(75, 192, 192)',
+        ],
+        borderWidth: 1
+    }]
+};
+
+
+export const faq = [
+    {
+        "question": "How do I enroll in online courses?",
+        "answer": "Enrolling in online courses typically involves visiting the institution's website, creating an account, and following the provided instructions for course registration."
+    },
+    {
+        "question": "Where can I find information about course fees and payment methods?",
+        "answer": "Information about course fees and payment methods is usually available on the institution's official website or can be obtained by contacting the admissions or finance department."
+    },
+    {
+        "question": "How are online courses structured, and what is the learning format?",
+        "answer": "Online courses often include video lectures, readings, assignments, and interactive discussions. The specific format may vary, so it's essential to check the course details for more information."
+    },
+    {
+        "question": "How can I access course materials and resources?",
+        "answer": "Course materials are typically accessible through a dedicated online platform or learning management system (LMS). Students receive login details upon enrollment."
+    },
+    {
+        "question": "Are there any scholarships or financial aid options available for students?",
+        "answer": "Institutions often offer scholarships or financial aid programs. Details about eligibility criteria and application processes can be obtained from the financial aid office."
+    },
+    {
+        "question": "What academic support services are available for online students?",
+        "answer": "Online students usually have access to academic support services, including online tutoring, discussion forums, and virtual office hours with instructors."
+    },
+    {
+        "question": "How are assessments and exams conducted in online courses?",
+        "answer": "Assessments and exams in online courses may include quizzes, essays, and timed exams. The specific methods are outlined in the course syllabus."
+    },
+    {
+        "question": "Can I transfer credits from previous academic programs?",
+        "answer": "Many institutions allow credit transfers, but the process and criteria vary. Students should contact the admissions or registrar's office for information on credit transfer policies."
+    },
+    {
+        "question": "What technology requirements are needed for online courses?",
+        "answer": "Online courses may have specific technology requirements, such as a reliable internet connection, compatible devices, and software. These details are usually provided in the course answerription."
+    },
+    {
+        "question": "How do I contact professors or instructors for academic assistance?",
+        "answer": "Contact information for professors or instructors is often available on the institution's website or the course syllabus. Students can use email or virtual office hours for communication."
+    }  
+];
