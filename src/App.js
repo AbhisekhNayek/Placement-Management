@@ -58,6 +58,8 @@ import AdminCompanyView from './components/AdminCompanyView';
 import AboutUs from './components/home/about/AboutUs';
 import Courses from './components/home/course/Courses';
 import Team from './components/home/team/Team';
+import Placement from './components/home/placement/Placement';
+import ContactUs from './components/home/contactUs/ContactUs';
 
 function App() {
   return (
@@ -122,6 +124,8 @@ function App() {
           <Route path="/aboutus" element={<AboutUs/>}/>
           <Route path="/courses" element={<Courses />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/placement" element={<Placement />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </Router>
     </div>

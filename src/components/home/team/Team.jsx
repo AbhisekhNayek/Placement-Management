@@ -5,16 +5,20 @@ import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { PiStudentDuotone } from "react-icons/pi";
 import { FaBuildingUser } from "react-icons/fa6";
 import banner from '../../../images/courses/coursesBanner.jpg';
-import { footerLists, tabs } from '../../common/DummyData';
+import { footerLists, tabs, teamMember } from '../../common/DummyData';
 import { FaGithub, FaInstagram, FaLinkedin, FaMeta, FaXTwitter } from 'react-icons/fa6';
-import './nameCard.css'
-import { CiMail } from "react-icons/ci";
+import './nameCard.css';
+import { MdOutlineEmail } from "react-icons/md";
+import { HiOutlineIdentification } from "react-icons/hi2";
+import { FiGithub } from "react-icons/fi";
+import { RiLinkedinBoxLine } from "react-icons/ri";
 
 const Team = () => {
     return (
         <div className='relative h-screen scroll-smooth'>
+            {/* banner */}
             <div
-            className={`h-full flex flex-col items-start justify-center pl-4 pr-4 sm:pl-12 md:pl-32 bg-fixed bg-cover bg-top`}
+            className={`h-full flex flex-col items-start justify-center pl-4 pr-4 sm:pl-12 md:pl-32 bg-fixed bg-center bg-cover`}
             style={{
                 backgroundImage: `url('${banner}')`,
             }}>
@@ -38,36 +42,55 @@ const Team = () => {
                 </div>
             </div>
 
-            <div>
-                <div class="card">
-                    <button class="mail">
-                        <CiMail className=' text-2xl'/>
-                    </button>
-
-                    <div class="profile-pic"></div>
-
-                    <div class="bottom">
-                        <div class="content">
-                            <span class="name">My Name</span>
-                            <span class="about-me"
-                                >Lorem ipsum dolor sit amet consectetur adipisicinFcls
-                            </span>
+            <div className='grid nameCardHolder lg:grid-cols-2 place-items-center place-content-center gap-y-16'>
+                {teamMember.map((member, indx) => (
+                    <div className="cardContainer group" key={indx + member.name}>
+                        {/* image */}
+                        <div className="profileDiv">
+                            <img 
+                                src={member.image}
+                                alt={member.name} 
+                            />
                         </div>
                         
-                        <div class="bottom-bottom">
-                            <div className="social-links-container">
-                                <FaInstagram/>
-                                <FaXTwitter/>
-                                <FaGithub/>
+                        {/* behind card */}
+                        <div className="infoDiv">
+                            {/* description */}
+                            <div className="nameDiv">
+                                <p className="font-bold text-green-800 name font-onest">
+                                    {member.name}
+                                </p>
+                                
+                                <p className="role font-montserrat">
+                                    {member.role}
+                                </p>
                             </div>
+                            
+                            {/* icons */}
+                            <div className="socialDiv">
+                                <a href={member.socialLinks.github}  target="_blank" rel="noopener noreferrer">
+                                    <FiGithub className='transition-all socialMediaIcon github'/>
+                                </a>
+                            
+                                <a href={member.socialLinks.linkedin}  target="_blank" rel="noopener noreferrer">
+                                    <RiLinkedinBoxLine className='transition-all socialMediaIcon linkedin'/>
+                                </a>
 
-                            <button class="button">Contact Me</button>
+                                <a href={`mailto:${member.socialLinks.mail}`}  target="_blank" rel="noopener noreferrer">
+                                    <MdOutlineEmail className='transition-all socialMediaIcon mail'/>
+                                </a>
+
+                                <a href={member.socialLinks.portfolio}  target="_blank" rel="noopener noreferrer">
+                                    <HiOutlineIdentification className='transition-all socialMediaIcon portfolio'/>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
             
-            <div className='mt-10'>
+            {/* footer */}
+            <div className='mt-16'>
                 <Footer/>
             </div>
         </div>

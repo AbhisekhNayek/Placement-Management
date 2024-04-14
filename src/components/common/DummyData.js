@@ -60,8 +60,10 @@ import { AiOutlineSchedule } from "react-icons/ai";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { RiTeamLine } from "react-icons/ri";
 import { IoBriefcaseOutline } from "react-icons/io5";
-import { TbBrandBlogger } from "react-icons/tb";
 import { AiOutlineContacts } from "react-icons/ai";
+
+import avisek from '../../images/team/abhisekh.png';
+import Soumya from '../../images/team/Soumya.jpg';
 
 export const onlineCourses = [
     {
@@ -441,7 +443,31 @@ export const tabs = [
     {text: 'Courses', icon: <AiOutlineSchedule/>, path: '/courses'},
     {text: 'About Us', icon: <MdOutlineAccountCircle/>, path: '/aboutus'},
     {text: 'Our Team', icon: <RiTeamLine/>, path: '/team'},
-    {text: 'Placement', icon: <IoBriefcaseOutline/>, path: '/'},
-    {text: 'Blogs', icon: <TbBrandBlogger/>, path: '/'},
-    {text: 'Contact Us', icon: <AiOutlineContacts/>, path: '/'},
+    {text: 'Placement', icon: <IoBriefcaseOutline/>, path: '/placement'},
+    {text: 'Contact Us', icon: <AiOutlineContacts/>, path: '/contactus'},
 ];
+
+export const teamMember = [
+    {
+        name: 'Avisekh Nayek',
+        role: 'Back-End Developer',
+        image: avisek,
+        socialLinks: {
+            github: 'https://github.com/AbhisekhNayek',
+            linkedin: 'https://www.linkedin.com/in/abhisekhnayek1755/',
+            portfolio: 'https://abhisekhnayek.github.io/14/',
+            mail: 'abhisekhnayek1@gmail.com',
+        },
+    },
+    {
+        name: 'Soumya Sankar Das',
+        role: 'Front-End Developer',
+        image: Soumya,
+        socialLinks: {
+            github: 'https://github.com/Soumya-0x000',
+            linkedin: 'https://www.linkedin.com/in/soumya-sankar-das-874085221/',
+            portfolio: 'https://portfolio-five-mu-72.vercel.app',
+            mail: 'soumyadas429@gmail.com',
+        },
+    },
+]
