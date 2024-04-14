@@ -1,3 +1,6 @@
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -5,8 +8,10 @@ import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { PiStudentDuotone } from "react-icons/pi";
 import { FaBuildingUser } from "react-icons/fa6";
 import banner from '../../../images/courses/coursesBanner.jpg';
-import { footerLists, tabs } from '../../common/DummyData';
+import { faq, footerLists, tabs } from '../../common/DummyData';
 import { FaGithub, FaInstagram, FaLinkedin, FaMeta, FaXTwitter } from 'react-icons/fa6';
+import { MdExpandMore } from "react-icons/md";
+import BarChart from './Barchart';
 
 const Placement = () => {
     return (
@@ -37,10 +42,51 @@ const Placement = () => {
                 </div>
             </div>
 
-            
-            <div>
-                
+            {/* bar chart */}
+            <div className='mt-14 px-6'>
+                <div className=' capitalize font-lato text-2xl md:text-4xl text-blue-950 text-center mb-6'>
+                    get a view of our placement history
+                </div>
+
+                <BarChart/>
             </div>
+
+            {/* faq */}
+            <>
+                <div className='mt-10 font-bold text-[2.3rem] md:text-[3rem] font-jaldi text-blue-900 text-center capitalize'>
+                    most asked questions
+                </div>
+
+                <div className=' max-h-[20rem] overflow-y-auto px-3 mt-6 space-y-2'>
+                    {faq.map((faq, i) => (
+                        <Accordion 
+                        key={i}>
+                            <AccordionSummary
+                            expandIcon={<MdExpandMore />}
+                            aria-controls="panel1-content"
+                            id="panel1-header"
+                            sx={{
+                                backgroundColor: '#E8FFF5',
+                                color: 'green',
+                            }}>
+                                <p className='font-semibold font-onest text-[18px] md:text-[20px] md:tracking-wide'>
+                                    Q:{i+1} {faq.question}
+                                </p>
+                            </AccordionSummary>
+
+                            <AccordionDetails
+                            sx={{
+                                backgroundColor: '#D3F9FF',
+                                color: '#003C45',
+                            }}>
+                                <p className='font-semibold font-mavenPro text-[17px] md:tracking-wide'>
+                                    {faq.answer}
+                                </p>
+                            </AccordionDetails>
+                        </Accordion>
+                    ))}
+                </div>
+            </>
 
             {/* footer */}
             <div className='mt-10'>
